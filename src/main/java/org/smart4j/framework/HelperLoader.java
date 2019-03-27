@@ -1,5 +1,9 @@
-package org.smart4j.framework.helper;
+package org.smart4j.framework;
 
+import org.smart4j.framework.helper.BeanHelper;
+import org.smart4j.framework.helper.ClassHelper;
+import org.smart4j.framework.helper.ControllerHelper;
+import org.smart4j.framework.helper.IocHelper;
 import org.smart4j.framework.util.ClassUtil;
 
 public final class HelperLoader {
