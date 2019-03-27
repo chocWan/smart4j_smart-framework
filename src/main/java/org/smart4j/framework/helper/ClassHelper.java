@@ -19,7 +19,7 @@ public final class ClassHelper {
         return CLASS_SET;
     }
 
-    public Set<Class<?>> getSerivceClassSet(){
+    public static Set<Class<?>> getSerivceClassSet(){
         Set<Class<?>> services = new HashSet<Class<?>>();
         for(Class<?> cls : CLASS_SET) {
             if(cls.isAnnotationPresent(Service.class)){
@@ -29,7 +29,7 @@ public final class ClassHelper {
         return services;
     }
 
-    public Set<Class<?>> getControllerClassSet(){
+    public static Set<Class<?>> getControllerClassSet(){
         Set<Class<?>> services = new HashSet<Class<?>>();
         for(Class<?> cls : CLASS_SET) {
             if(cls.isAnnotationPresent(Service.class)){
@@ -37,6 +37,13 @@ public final class ClassHelper {
             }
         }
         return services;
+    }
+
+    public static Set<Class<?>> getBeanClassSet(){
+        Set<Class<?>> beanClassSet = new HashSet<Class<?>>();
+        beanClassSet.addAll(getControllerClassSet());
+        beanClassSet.addAll(getSerivceClassSet());
+        return  beanClassSet;
     }
 
 }
