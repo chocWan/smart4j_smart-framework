@@ -1,7 +1,5 @@
 package org.smart4j.framework.util;
 
-import org.apache.commons.logging.LogFactory;
-import org.apache.log4j.spi.LoggerFactory;
 import org.slf4j.Logger;
 
 import java.io.File;
